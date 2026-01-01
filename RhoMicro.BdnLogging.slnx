@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="demo_video.mp4" />
+    <File Path="demo_video_thumbnail.png" />
+    <File Path="Readme.md" />
+    <File Path=".gitignore" />
+  </Folder>
+  <Project Path="RhoMicro.BdnLogging/RhoMicro.BdnLogging.csproj" />
+</Solution>
