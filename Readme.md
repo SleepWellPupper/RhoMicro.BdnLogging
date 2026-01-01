@@ -8,5 +8,6 @@ This library is licensed to you under the MPL-2.0.
 
 ## Demo
 
-![demo_video]([https://youtu.be/watch?v=9_1m7lWy2GI](https://github.com/user-attachments/assets/a31791db-c777-4d34-9292-d31eb3d4d2cb))
-
+<p align="center" width="100%">
+<video src="https://github.com/user-attachments/assets/7d20cef0-b895-4659-8b7a-50839bbc46a3" width="80%" controls></video>
+</p>
