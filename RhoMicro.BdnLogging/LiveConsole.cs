@@ -1,13 +1,14 @@
 // SPDX-License-Identifier: MPL-2.0
 
+namespace RhoMicro.BdnLogging;
+
 using System.Buffers;
-using System.Diagnostics;
-using System.Runtime.InteropServices;
 
 internal class LiveConsole
 {
     public static LiveConsole Default { get; } = new();
 
+    private Boolean _isDirty = false;
     private Boolean _isLive = false;
     private Int32 _liveTop = -1;
 
@@ -27,7 +28,7 @@ internal class LiveConsole
 
             _isLive = true;
         }
-        else
+        else if (_isDirty)
         {
             top -= 2;
         }
@@ -35,17 +36,25 @@ internal class LiveConsole
         _liveTop = top;
 
         var messages = message.Split(
-                ['\n', '\r'],
-                StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
-            .Select(m => m[..(m.Length > bufferWidth ? bufferWidth : m.Length)]);
+            ['\n', '\r'],
+            StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
 
-        foreach (var m in messages)
+        const String prefix = "> ";
+        var maxLineLength = bufferWidth - prefix.Length;
+
+        foreach (var messageLine in messages)
         {
             Console.SetCursorPosition(0, _liveTop);
 
+            var truncatedLength = messageLine.Length > maxLineLength ? maxLineLength : messageLine.Length;
+            var truncatedLine = messageLine.AsSpan(0, truncatedLength);
+
             WriteProgress(progress, bufferWidth);
-            Console.Write(m);
-            WritePadding(m.Length, bufferWidth);
+            Console.Write(prefix);
+            Console.Write(truncatedLine);
+            WritePadding(truncatedLength + prefix.Length, bufferWidth);
+
+            _isDirty = true;
         }
     }
 
@@ -82,10 +91,6 @@ internal class LiveConsole
             }
 
             var remaining = textBuffer;
-            var paddingWidth = (paddedLabelWidth - label.Length) / 2f;
-            var leftPaddingWidth = (Int32)Math.Floor(paddingWidth);
-            remaining[..leftPaddingWidth].Fill(' ');
-            remaining = remaining[leftPaddingWidth..];
             label.CopyTo(remaining);
             remaining = remaining[label.Length..];
             ellipsis.CopyTo(remaining);
@@ -101,15 +106,12 @@ internal class LiveConsole
             var previousForegroundColor = Console.ForegroundColor;
             var previousBackgroundColor = Console.BackgroundColor;
 
-            var primaryColor = progress.PrimaryColor ?? previousForegroundColor;
-            var secondaryColor = progress.SecondaryColor ?? previousBackgroundColor;
-
-            Console.ForegroundColor = secondaryColor;
-            Console.BackgroundColor = primaryColor;
+            Console.ForegroundColor = progress.CompletedForegroundColor ?? previousBackgroundColor;
+            Console.BackgroundColor = progress.CompletedBackgroundColor ?? previousForegroundColor;
             Console.Write(leftPart);
 
-            Console.ForegroundColor = primaryColor;
-            Console.BackgroundColor = secondaryColor;
+            Console.ForegroundColor = progress.PendingForegroundColor ?? previousForegroundColor;
+            Console.BackgroundColor = progress.PendingBackgroundColor ?? previousBackgroundColor;
             Console.Write(rightPart);
 
             Console.ForegroundColor = previousForegroundColor;
@@ -152,10 +154,10 @@ internal class LiveConsole
 
         Console.SetCursorPosition(0, _liveTop);
         WritePadding(0, bufferWidth);
-        Console.SetCursorPosition(0, _liveTop + 1);
         WritePadding(0, bufferWidth);
         Console.SetCursorPosition(0, _liveTop);
         _isLive = false;
+        _isDirty = false;
     }
 
     private void WritePadding(Int32 messageLength, Int32 bufferWidth)
@@ -179,10 +181,22 @@ internal class LiveConsole
             ArrayPool<Char>.Shared.Return(rented);
         }
 
+#if DEBUG
         // _liveTop += 2;
         // Console.WriteLine();
         // Console.WriteLine();
-        
+#endif
+
         Console.WriteLine();
     }
 }
+
+#if !NET10_0_OR_GREATER
+file static class ConsoleExtensions
+{
+    extension(Console)
+    {
+        public static void Write(ReadOnlySpan<Char> text) => Console.Write(text.ToString());
+    }
+}
+#endif

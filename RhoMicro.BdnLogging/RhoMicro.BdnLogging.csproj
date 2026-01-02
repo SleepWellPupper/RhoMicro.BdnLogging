@@ -1,16 +1,33 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net10.0</TargetFramework>
+    <TargetFrameworks>net8.0;net9.0;net10.0</TargetFrameworks>
     <LangVersion>preview</LangVersion>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
-  
-  
+
+  <PropertyGroup>
+    <IsPackable>true</IsPackable>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>This is a less verbose logger implementation for `BenchmarkDotNet` that doesn't clutter your terminal.</Description>
+    <PackageTags>BDN;BenchmarkDotNet;Logging;Logger</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseExpression>MPL-2.0</PackageLicenseExpression>
+    <Authors>Paul Braetz</Authors>
+    <Copyright>$([System.DateTime]::Now.ToString('yyyy'))</Copyright>
+    <Company>RhoMicro</Company>
+    <PackageId>$(ProjectName)</PackageId>
+    <RepositoryUrl>https://github.com/SleepWellPupper/$(ProjectName)</RepositoryUrl>
+    <ProjectUrl>$(RepositoryUrl)</ProjectUrl>
+  </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="BenchmarkDotNet" Version="0.15.8"/>
+    <PackageReference Include="BenchmarkDotNet"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="../README.md" Pack="true" PackagePath="/" CopyToOutputDirectory="Always"/>
   </ItemGroup>
 
 </Project>

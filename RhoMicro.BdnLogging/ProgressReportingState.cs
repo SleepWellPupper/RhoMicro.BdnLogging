@@ -1,5 +1,7 @@
 // SPDX-License-Identifier: MPL-2.0
 
+namespace RhoMicro.BdnLogging;
+
 using System.Globalization;
 using System.Text.RegularExpressions;
 using BenchmarkDotNet.Loggers;
@@ -15,8 +17,16 @@ internal sealed partial class ProgressReportingState : State
     private readonly State _state;
     private readonly BenchmarkState? _benchmarkState;
 
-    [GeneratedRegex(@"(?:\/\/ \*\* Remained ([0-9]+) \()([0-9]+\.[0-9]+)(?=%\))", RegexOptions.Multiline)]
+    private const String _progressPattern =
+        @"\/\/ \*\* Remained ([0-9]+) \(([0-9]+\.[0-9]+)%\).*\(([0-9]+h [0-9]+m) from now\) \*\*";
+    
+#if NET10_0_OR_GREATER
+    [GeneratedRegex(_progressPattern)]
     private static partial Regex ProgressPattern { get; }
+#else
+    private static Regex ProgressPattern { get; } =
+ new(_progressPattern, RegexOptions.Compiled);
+#endif
 
     private void TrySetProgress(LogKind kind, String text)
     {
@@ -30,18 +40,24 @@ internal sealed partial class ProgressReportingState : State
             return;
         }
 
-        if (ProgressPattern.Match(text).Groups is not [_, { Value: { } countValue }, { Value: { } percentageValue }])
+        if (ProgressPattern.Match(text).Groups is not
+            [
+                _,
+                { Value: { } countValue },
+                { Value: { } percentageValue },
+                { Value: { } eta },
+            ])
         {
             return;
         }
 
-        if (!Single.TryParse(percentageValue, CultureInfo.InvariantCulture, out var percentage))
+        if (!Int32.TryParse(countValue, CultureInfo.InvariantCulture, out var count))
         {
             return;
         }
 
-        _benchmarkState.ProgressRatio = 1 - percentage / 100;
-        // LiveConsole.Default.WriteLine($"Progress: {_benchmarkState.ProgressRatio:F2}");
+        _benchmarkState.RemainingCount = count;
+        _benchmarkState.Eta = eta;
     }
 
     public override State TransitionAndWriteLine(LogKind kind, String text)
@@ -100,7 +116,7 @@ internal sealed partial class ProgressReportingState : State
     public override State TransitionBeforeWrite(LogKind kind, string text)
     {
         TrySetProgress(kind, text);
-        
+
         return _benchmarkState?.TryAdvance(text) ?? false
             ? _benchmarkState
             : _state.TransitionBeforeWrite(kind, text);

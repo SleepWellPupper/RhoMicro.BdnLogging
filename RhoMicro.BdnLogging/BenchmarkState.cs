@@ -1,5 +1,7 @@
 // SPDX-License-Identifier: MPL-2.0
 
+namespace RhoMicro.BdnLogging;
+
 using System.Diagnostics.CodeAnalysis;
 using System.Text.RegularExpressions;
 using BenchmarkDotNet.Loggers;
@@ -17,17 +19,34 @@ internal sealed partial class BenchmarkState : State
     private readonly String _name;
     private String _method;
 
+#if NET10_0_OR_GREATER
     [GeneratedRegex(@"(?:\/\/ Benchmark: )([a-zA-Z0-9]+)(?:\.)([a-zA-Z0-9]+)")]
     private static partial Regex NamePattern { get; }
 
     [GeneratedRegex(@"(?:\/\/ \*\*\*\*\* Found )([0-9]+)")]
     private static partial Regex FoundPattern { get; }
+#else
+    private static Regex NamePattern { get; } =
+        new(@"(?:\/\/ Benchmark: )([a-zA-Z0-9]+)(?:\.)([a-zA-Z0-9]+)", RegexOptions.Compiled);
+    
+    private static Regex FoundPattern { get; } 
+        = new(@"(?:\/\/ \*\*\*\*\* Found )([0-9]+)", RegexOptions.Compiled);
+#endif
 
     public String Name => _name;
     public String Method => ProgressRatio is 1 ? String.Empty : _method;
 
-    public Single ProgressRatio { get; set; }
-    public Int32 CompletedCount => (Int32)Math.Ceiling(_totalCount * ProgressRatio);
+    public Single ProgressRatio => TotalCount is not 0
+        ? CompletedCount / (Single)TotalCount
+        : 0;
+
+    public String Eta { get; set; } = "unknown";
+    public Int32? RemainingCount { get; set; }
+
+    public Int32 CompletedCount => RemainingCount is { } remainingCount
+        ? TotalCount - remainingCount
+        : 0;
+
     public Int32 TotalCount => _totalCount;
 
     public Boolean TryAdvance(String text)
@@ -78,17 +97,22 @@ internal sealed partial class BenchmarkState : State
             LogKind.Warning => new WarningState(this),
             LogKind.Error => new ErrorState(this),
             LogKind.Header when TryCreate(text, out var benchmarkState) && benchmarkState.Name != _name =>
-                benchmarkState.WithProgress(ProgressRatio, TotalCount),
+                benchmarkState.WithProgress(RemainingCount, TotalCount, Eta),
             LogKind.Header => new ProgressReportingState(new SingleLineLiveState(this), this),
             LogKind.Statistic => new ResultsTableState(this),
             _ => new ContinuousLiveState(kind, this),
         };
     }
 
-    private BenchmarkState WithProgress(Single progressRatio, Int32 totalCount)
+    private BenchmarkState WithProgress(
+        Int32? remainingCount,
+        Int32 totalCount,
+        String eta)
     {
-        ProgressRatio = progressRatio;
+        RemainingCount = remainingCount;
+        Eta = eta;
         _totalCount = totalCount;
+
         return this;
     }
 }

@@ -1,8 +1,10 @@
 // SPDX-License-Identifier: MPL-2.0
 
+namespace RhoMicro.BdnLogging; 
+
 using BenchmarkDotNet.Loggers;
 
-internal sealed partial class DefaultState : State<DefaultState>
+internal sealed class DefaultState : State<DefaultState>
 {
     public override ConsoleColor Color => ConsoleColor.White;
 

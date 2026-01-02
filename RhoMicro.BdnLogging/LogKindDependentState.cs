@@ -1,5 +1,7 @@
 // SPDX-License-Identifier: MPL-2.0
 
+namespace RhoMicro.BdnLogging; 
+
 using BenchmarkDotNet.Loggers;
 
 internal abstract class LogKindDependentState(

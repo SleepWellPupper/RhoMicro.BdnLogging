@@ -1,7 +1,8 @@
 // SPDX-License-Identifier: MPL-2.0
 
-using BenchmarkDotNet.Loggers;
+namespace RhoMicro.BdnLogging; 
 
+using BenchmarkDotNet.Loggers;
 
 internal sealed class ErrorState(BenchmarkState? benchmarkState)
     : LogKindDependentState<ErrorState>(LogKind.Error, benchmarkState)

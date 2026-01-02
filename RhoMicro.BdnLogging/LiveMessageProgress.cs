@@ -1,38 +1,54 @@
 // SPDX-License-Identifier: MPL-2.0
 
+namespace RhoMicro.BdnLogging;
+
+using System.Text;
+
 internal readonly record struct LiveMessageProgress(
     String? Name,
-    ConsoleColor? PrimaryColor,
-    ConsoleColor? SecondaryColor,
+    ConsoleColor? PendingForegroundColor,
+    ConsoleColor? PendingBackgroundColor,
+    ConsoleColor? CompletedForegroundColor,
+    ConsoleColor? CompletedBackgroundColor,
     Single ProgressRatio)
 {
     public static LiveMessageProgress Default => new(
         Name: null,
-        PrimaryColor: ConsoleColor.Green,
-        SecondaryColor: ConsoleColor.Black,
+        CompletedForegroundColor: ConsoleColor.Black,
+        CompletedBackgroundColor: ConsoleColor.DarkGreen,
+        PendingForegroundColor: ConsoleColor.DarkGreen,
+        PendingBackgroundColor: (ConsoleColor)(-1),
         ProgressRatio: 0);
 
     public static LiveMessageProgress Create(BenchmarkState? benchmarkState)
     {
         if (benchmarkState is not
             {
-                Name: var name,
+                Name: [_, ..] name,
                 Method: var method,
                 ProgressRatio: var progress,
                 TotalCount: var totalCount,
-                CompletedCount: var completedCount
+                CompletedCount: var completedCount,
+                Eta: var eta
             })
         {
-            return Default;
+            return Default with { Name = "Processing" };
         }
 
-        var result = Default with
+        var nameBuilder = new StringBuilder();
+
+        nameBuilder.Append($"Finished {completedCount}/{totalCount} ({progress:P}), ETA: {eta}, ");
+
+        if (method is not [])
         {
-            Name = method is []
-                ? $"{name} ({completedCount}/{totalCount})"
-                : $"{name}.{method} ({completedCount}/{totalCount})",
-            ProgressRatio = progress
-        };
+            nameBuilder.Append($"Running {name}.{method}");
+        }
+        else
+        {
+            nameBuilder.Append($"Processing {name}");
+        }
+
+        var result = Default with { Name = nameBuilder.ToString(), ProgressRatio = progress };
 
         return result;
     }

@@ -1,8 +1,10 @@
 // SPDX-License-Identifier: MPL-2.0
 
+namespace RhoMicro.BdnLogging; 
+
 using BenchmarkDotNet.Loggers;
 
-internal sealed partial class ContinuousLiveState(
+internal sealed class ContinuousLiveState(
     LogKind requiredKind,
     BenchmarkState? benchmarkState = null)
     : LogKindDependentState(requiredKind, benchmarkState)

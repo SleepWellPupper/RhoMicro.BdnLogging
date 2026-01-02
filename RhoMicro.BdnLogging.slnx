@@ -1,7 +1,842 @@
 <Solution>
+  <Folder Name="/Benchmarks/">
+    <File Path="Benchmarks/Directory.Packages.props" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/">
+    <Project Path="Benchmarks/MiscBenchmarks/ArrayForVsForeach/ArrayForVsForeach.csproj" />
+    <Project Path="Benchmarks/MiscBenchmarks/ArrayVsDictionaryLookup/ArrayVsDictionaryLookup.csproj" />
+    <Project Path="Benchmarks/MiscBenchmarks/AsyncAwaitVsTaskReturn/AsyncAwaitVsTaskReturn.csproj" />
+    <Project Path="Benchmarks/MiscBenchmarks/Base64DeserializationRoundTrip/Base64DeserializationRoundTrip.csproj" />
+    <Project Path="Benchmarks/MiscBenchmarks/CollectionBulkVsIndividualAdd/CollectionBulkVsIndividualAdd.csproj" />
+    <Project Path="Benchmarks/MiscBenchmarks/ConcatVsAppendStringArrays/ConcatVsAppendStringArrays.csproj" />
+    <Project Path="Benchmarks/MiscBenchmarks/ContainsVsIndexOf/ContainsVsIndexOf.csproj" />
+    <Project Path="Benchmarks/MiscBenchmarks/ConvertVsParse/ConvertVsParse.csproj" />
+    <Project Path="Benchmarks/MiscBenchmarks/CountDigitsBenchmark/CountDigitsBenchmark.csproj" />
+    <Project Path="Benchmarks/MiscBenchmarks/CountingStringsBenchmark/CountingStringsBenchmark.csproj" />
+    <Project Path="Benchmarks/MiscBenchmarks/DictionaryCombineBenchmark/DictionaryCombineBenchmark.csproj" />
+    <Project Path="Benchmarks/MiscBenchmarks/DictionaryRemoval/DictionaryRemoval.csproj" />
+    <Project Path="Benchmarks/MiscBenchmarks/DictionaryVsFrozenDictionaryPopulation/DictionaryVsFrozenDictionaryPopulation.csproj" />
+    <Project Path="Benchmarks/MiscBenchmarks/EnumerableRangeVsArray/EnumerableRangeVsArray.csproj" />
+    <Project Path="Benchmarks/MiscBenchmarks/FileStreamVsRandomAccess/FileStreamVsRandomAccess.csproj" />
+    <Project Path="Benchmarks/MiscBenchmarks/ForEachVsToListForEach/ForEachVsToListForEach.csproj" />
+    <Project Path="Benchmarks/MiscBenchmarks/GetTypeVsTypeofFullName/GetTypeVsTypeofFullName.csproj" />
+    <Project Path="Benchmarks/MiscBenchmarks/HashSimilarity/HashSimilarity.csproj" />
+    <Project Path="Benchmarks/MiscBenchmarks/ImmutableArrayVsReadOnlyList/ImmutableArrayVsReadOnlyList.csproj" />
+    <Project Path="Benchmarks/MiscBenchmarks/IntegerVsFloatLoops/IntegerVsFloatLoops.csproj" />
+    <Project Path="Benchmarks/MiscBenchmarks/InterlockedIncrement/InterlockedIncrement.csproj" />
+    <Project Path="Benchmarks/MiscBenchmarks/IntParseVsIntToString/IntParseVsIntToString.csproj" />
+    <Project Path="Benchmarks/MiscBenchmarks/KeyValuePairIteration/KeyValuePairIteration.csproj" />
+    <Project Path="Benchmarks/MiscBenchmarks/LargeFileReadBufferSizes/LargeFileReadBufferSizes.csproj" />
+    <Project Path="Benchmarks/MiscBenchmarks/ListExistsVsLinqAny/ListExistsVsLinqAny.csproj" />
+    <Project Path="Benchmarks/MiscBenchmarks/ListSpreadVsReadOnly/ListSpreadVsReadOnly.csproj" />
+    <Project Path="Benchmarks/MiscBenchmarks/LookupBenchmark/LookupBenchmark.csproj" />
+    <Project Path="Benchmarks/MiscBenchmarks/NullChecksBenchmark/NullChecksBenchmark.csproj" />
+    <Project Path="Benchmarks/MiscBenchmarks/NumericStringComparison/NumericStringComparison.csproj" />
+    <Project Path="Benchmarks/MiscBenchmarks/ParseVsTryParse/ParseVsTryParse.csproj" />
+    <Project Path="Benchmarks/MiscBenchmarks/PropertyInitializationBenchmark/PropertyInitializationBenchmark.csproj" />
+    <Project Path="Benchmarks/MiscBenchmarks/RandomElementsBenchmark/RandomElementsBenchmark.csproj" />
+    <Project Path="Benchmarks/MiscBenchmarks/RegexVsSplit/RegexVsSplit.csproj" />
+    <Project Path="Benchmarks/MiscBenchmarks/ReverseString/ReverseString.csproj" />
+    <Project Path="Benchmarks/MiscBenchmarks/Scratch/Scratch.csproj" />
+    <Project Path="Benchmarks/MiscBenchmarks/ShuffleBenchmark/ShuffleBenchmark.csproj" />
+    <Project Path="Benchmarks/MiscBenchmarks/ShuffleRandomVsSecure/ShuffleRandomVsSecure.csproj" />
+    <Project Path="Benchmarks/MiscBenchmarks/SortWithEnumParsing/SortWithEnumParsing.csproj" />
+    <Project Path="Benchmarks/MiscBenchmarks/StringConcatVsStringBuilder/StringConcatVsStringBuilder.csproj" />
+    <Project Path="Benchmarks/MiscBenchmarks/StringEquals/StringEquals.csproj" />
+    <Project Path="Benchmarks/MiscBenchmarks/StringToEnumConversion/StringToEnumConversion.csproj" />
+    <Project Path="Benchmarks/MiscBenchmarks/TeBeCoStorageDictionary/TeBeCoStorageDictionary.csproj" />
+    <Project Path="Benchmarks/MiscBenchmarks/VarVsExplicit/VarVsExplicit.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/AnyNonNullVsJustEnumerating/">
+    <Project Path="Benchmarks/MiscBenchmarks/AnyNonNullVsJustEnumerating/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ArrayBoundsChecks/">
+    <Project Path="Benchmarks/MiscBenchmarks/ArrayBoundsChecks/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ArrayInitialization/">
+    <Project Path="Benchmarks/MiscBenchmarks/ArrayInitialization/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ArrayListVsList/">
+    <Project Path="Benchmarks/MiscBenchmarks/ArrayListVsList/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ArrayPoolVsStackAlloc/">
+    <Project Path="Benchmarks/MiscBenchmarks/ArrayPoolVsStackAlloc/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ArrayRotate/">
+    <Project Path="Benchmarks/MiscBenchmarks/ArrayRotate/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ArraySum/">
+    <Project Path="Benchmarks/MiscBenchmarks/ArraySum/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/AsCastVsDirectCast/">
+    <Project Path="Benchmarks/MiscBenchmarks/AsCastVsDirectCast/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/AsParallelIteration/">
+    <Project Path="Benchmarks/MiscBenchmarks/AsParallelIteration/AsParallelBenchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/AspNetRouteLookups/">
+    <Project Path="Benchmarks/MiscBenchmarks/AspNetRouteLookups/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/AsyncSignaledEvents/">
+    <Project Path="Benchmarks/MiscBenchmarks/AsyncSignaledEvents/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/AsyncVsNonAsyncMemoryStreamRead/">
+    <Project Path="Benchmarks/MiscBenchmarks/AsyncVsNonAsyncMemoryStreamRead/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/AsyncVsSyncFileIO/">
+    <Project Path="Benchmarks/MiscBenchmarks/AsyncVsSyncFileIO/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/AtLeastOneCommonElement/">
+    <Project Path="Benchmarks/MiscBenchmarks/AtLeastOneCommonElement/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/Base64DecodeAfterFirstChar/">
+    <Project Path="Benchmarks/MiscBenchmarks/Base64DecodeAfterFirstChar/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/BinarySearch/">
+    <Project Path="Benchmarks/MiscBenchmarks/BinarySearch/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/BitArrayVsHashSet/">
+    <Project Path="Benchmarks/MiscBenchmarks/BitArrayVsHashSet/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/Bitset/">
+    <Project Path="Benchmarks/MiscBenchmarks/Bitset/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/BlockCopyVsArrayCopyFloats/">
+    <Project Path="Benchmarks/MiscBenchmarks/BlockCopyVsArrayCopyFloats/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/BlockingCollectionVsChannel/">
+    <Project Path="Benchmarks/MiscBenchmarks/BlockingCollectionVsChannel/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/Boxing/">
+    <Project Path="Benchmarks/MiscBenchmarks/Boxing/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/BubbleSort/">
+    <Project Path="Benchmarks/MiscBenchmarks/BubbleSort/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/BuildLogIdSplitVsSpan/">
+    <Project Path="Benchmarks/MiscBenchmarks/BuildLogIdSplitVsSpan/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/BytesToLong/">
+    <Project Path="Benchmarks/MiscBenchmarks/BytesToLong/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/CaseInsensitiveStringComparison/">
+    <Project Path="Benchmarks/MiscBenchmarks/CaseInsensitiveStringComparison/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/CheckFiveValues/">
+    <Project Path="Benchmarks/MiscBenchmarks/CheckFiveValues/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/CheckIsBool/">
+    <Project Path="Benchmarks/MiscBenchmarks/CheckIsBool/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/CheckSpecialChars/">
+    <Project Path="Benchmarks/MiscBenchmarks/CheckSpecialChars/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/CheckThreeValues/">
+    <Project Path="Benchmarks/MiscBenchmarks/CheckThreeValues/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/CheckTwoValues/">
+    <Project Path="Benchmarks/MiscBenchmarks/CheckTwoValues/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ChooseBucketsWithMod/">
+    <Project Path="Benchmarks/MiscBenchmarks/ChooseBucketsWithMod/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/CollectionExpressionVsToArray/">
+    <Project Path="Benchmarks/MiscBenchmarks/CollectionExpressionVsToArray/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ComparingByteArrays/">
+    <Project Path="Benchmarks/MiscBenchmarks/ComparingByteArrays/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ConcatVsUnion/">
+    <Project Path="Benchmarks/MiscBenchmarks/ConcatVsUnion/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ConcurrentListAdd/">
+    <Project Path="Benchmarks/MiscBenchmarks/ConcurrentListAdd/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ConfigureAwait/">
+    <Project Path="Benchmarks/MiscBenchmarks/ConfigureAwait/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ContainsKey/">
+    <Project Path="Benchmarks/MiscBenchmarks/ContainsKey/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ConvertAllVsSelectAndToList/">
+    <Project Path="Benchmarks/MiscBenchmarks/ConvertAllVsSelectAndToList/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ConvertToStringVsToString/">
+    <Project Path="Benchmarks/MiscBenchmarks/ConvertToStringVsToString/Bencmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/CopyByteArray/">
+    <Project Path="Benchmarks/MiscBenchmarks/CopyByteArray/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/CopyReadOnlyListProperty/">
+    <Project Path="Benchmarks/MiscBenchmarks/CopyReadOnlyListProperty/ObjectCopyingBenchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/CountCharDigits/">
+    <Project Path="Benchmarks/MiscBenchmarks/CountCharDigits/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/CountingUsingStringContains/">
+    <Project Path="Benchmarks/MiscBenchmarks/CountingUsingStringContains/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/CountTokens/">
+    <Project Path="Benchmarks/MiscBenchmarks/CountTokens/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/CreatingReadOnlyTypes/">
+    <Project Path="Benchmarks/MiscBenchmarks/CreatingReadOnlyTypes/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/DateTimeNowVsDateTimeUtcNow/">
+    <Project Path="Benchmarks/MiscBenchmarks/DateTimeNowVsDateTimeUtcNow/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/DedupeDelimitedString/">
+    <Project Path="Benchmarks/MiscBenchmarks/DedupeDelimitedString/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/DeepCopy/">
+    <Project Path="Benchmarks/MiscBenchmarks/DeepCopy/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/DegreesToRadians/">
+    <Project Path="Benchmarks/MiscBenchmarks/DegreesToRadians/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/DelimitedStringToTokens/">
+    <Project Path="Benchmarks/MiscBenchmarks/DelimitedStringToTokens/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/DerSnofArrayAdd/">
+    <Project Path="Benchmarks/MiscBenchmarks/DerSnofArrayAdd/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/DetectRepeatedIntegers/">
+    <Project Path="Benchmarks/MiscBenchmarks/DetectRepeatedIntegers/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/DictionarVsLinqFirstOrDefault/">
+    <Project Path="Benchmarks/MiscBenchmarks/DictionarVsLinqFirstOrDefault/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/DictionaryAdd/">
+    <Project Path="Benchmarks/MiscBenchmarks/DictionaryAdd/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/DictionaryAnyVsCount/">
+    <Project Path="Benchmarks/MiscBenchmarks/DictionaryAnyVsCount/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/DictionaryIterateSortedKeys/">
+    <Project Path="Benchmarks/MiscBenchmarks/DictionaryIterateSortedKeys/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/DictionaryKeysAndValuesToArrayVsArrays/">
+    <Project Path="Benchmarks/MiscBenchmarks/DictionaryKeysAndValuesToArrayVsArrays/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/DictionaryLooksupsVibeCodingEdition/">
+    <Project Path="Benchmarks/MiscBenchmarks/DictionaryLooksupsVibeCodingEdition/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/DictionaryLookups/">
+    <Project Path="Benchmarks/MiscBenchmarks/DictionaryLookups/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/DictionaryLookupsCaseComparison/">
+    <Project Path="Benchmarks/MiscBenchmarks/DictionaryLookupsCaseComparison/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/DictionaryLookupsSimple/">
+    <Project Path="Benchmarks/MiscBenchmarks/DictionaryLookupsSimple/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/DictionaryPopulate/">
+    <Project Path="Benchmarks/MiscBenchmarks/DictionaryPopulate/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/DictionaryTryGetValueVsGetOrAdd/">
+    <Project Path="Benchmarks/MiscBenchmarks/DictionaryTryGetValueVsGetOrAdd/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/DictionaryUpdates/">
+    <Project Path="Benchmarks/MiscBenchmarks/DictionaryUpdates/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/DictionaryVsFrozenDictionary/">
+    <Project Path="Benchmarks/MiscBenchmarks/DictionaryVsFrozenDictionary/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/DictionaryVsMemoryCache/">
+    <Project Path="Benchmarks/MiscBenchmarks/DictionaryVsMemoryCache/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/DictionaryVsSortedListLookup/">
+    <Project Path="Benchmarks/MiscBenchmarks/DictionaryVsSortedListLookup/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/Distance/">
+    <Project Path="Benchmarks/MiscBenchmarks/Distance/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/DistinctToList/">
+    <Project Path="Benchmarks/MiscBenchmarks/DistinctToList/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/DistinctVsSkipping/">
+    <Project Path="Benchmarks/MiscBenchmarks/DistinctVsSkipping/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/Division/">
+    <Project Path="Benchmarks/MiscBenchmarks/Division/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/DynamicObjects/">
+    <Project Path="Benchmarks/MiscBenchmarks/DynamicObjects/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/EnumerableVsListIteration/">
+    <Project Path="Benchmarks/MiscBenchmarks/EnumerableVsListIteration/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/EnumerateArrayVsReadOnlyCollection/">
+    <Project Path="Benchmarks/MiscBenchmarks/EnumerateArrayVsReadOnlyCollection/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/EnumerateCollection/">
+    <Project Path="Benchmarks/MiscBenchmarks/EnumerateCollection/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/EnumerateDictionary/">
+    <Project Path="Benchmarks/MiscBenchmarks/EnumerateDictionary/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/EnumGetValues/">
+    <Project Path="Benchmarks/MiscBenchmarks/EnumGetValues/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/EnumLookup/">
+    <Project Path="Benchmarks/MiscBenchmarks/EnumLookup/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/EnumSizes/">
+    <Project Path="Benchmarks/MiscBenchmarks/EnumSizes/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/EnumToString/">
+    <Project Path="Benchmarks/MiscBenchmarks/EnumToString/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/EnumToStringLargeEnum/">
+    <Project Path="Benchmarks/MiscBenchmarks/EnumToStringLargeEnum/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/EqualsVsReferenceEquals/">
+    <Project Path="Benchmarks/MiscBenchmarks/EqualsVsReferenceEquals/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/FileSystemTraversal/">
+    <Project Path="Benchmarks/MiscBenchmarks/FileSystemTraversal/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/FilterDictionaryEntries/">
+    <Project Path="Benchmarks/MiscBenchmarks/FilterDictionaryEntries/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/FilterDictionaryEntries2/">
+    <Project Path="Benchmarks/MiscBenchmarks/FilterDictionaryEntries2/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/FlipSign/">
+    <Project Path="Benchmarks/MiscBenchmarks/FlipSign/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ForEachAsyncVsTaskWhenAll/">
+    <Project Path="Benchmarks/MiscBenchmarks/ForEachAsyncVsTaskWhenAll/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ForEachVsAny/">
+    <Project Path="Benchmarks/MiscBenchmarks/ForEachVsAny/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ForEachVsEnumerator/">
+    <Project Path="Benchmarks/MiscBenchmarks/ForEachVsEnumerator/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ForLoops/">
+    <Project Path="Benchmarks/MiscBenchmarks/ForLoops/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ForLoops2/">
+    <Project Path="Benchmarks/MiscBenchmarks/ForLoops2/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/GetCurrentAssembly/">
+    <Project Path="Benchmarks/MiscBenchmarks/GetCurrentAssembly/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/GettingLastElement/">
+    <Project Path="Benchmarks/MiscBenchmarks/GettingLastElement/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/GetTypeVsNameOf/">
+    <Project Path="Benchmarks/MiscBenchmarks/GetTypeVsNameOf/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/GetTypeVsTypeof/">
+    <Project Path="Benchmarks/MiscBenchmarks/GetTypeVsTypeof/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/GetTypeVsTypeof2/">
+    <Project Path="Benchmarks/MiscBenchmarks/GetTypeVsTypeof2/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/HashCodeCombining/">
+    <Project Path="Benchmarks/MiscBenchmarks/HashCodeCombining/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/HashFunctions/">
+    <Project Path="Benchmarks/MiscBenchmarks/HashFunctions/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/HashSetVsC5HashSet/">
+    <Project Path="Benchmarks/MiscBenchmarks/HashSetVsC5HashSet/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/HashSetVsFrozenSet/">
+    <Project Path="Benchmarks/MiscBenchmarks/HashSetVsFrozenSet/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/HashSetVsLinqDistinct/">
+    <Project Path="Benchmarks/MiscBenchmarks/HashSetVsLinqDistinct/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/HashSetVsList/">
+    <Project Path="Benchmarks/MiscBenchmarks/HashSetVsList/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/HashStringArray/">
+    <Project Path="Benchmarks/MiscBenchmarks/HashStringArray/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/HashTableVsDictionary/">
+    <Project Path="Benchmarks/MiscBenchmarks/HashTableVsDictionary/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/HexStringToBytes/">
+    <Project Path="Benchmarks/MiscBenchmarks/HexStringToBytes/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ICollectionAsArray/">
+    <Project Path="Benchmarks/MiscBenchmarks/ICollectionAsArray/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ICollectionIterate/">
+    <Project Path="Benchmarks/MiscBenchmarks/ICollectionIterate/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/IEnumerableCountVsToListCount/">
+    <Project Path="Benchmarks/MiscBenchmarks/IEnumerableCountVsToListCount/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/IEnumerableIterate/">
+    <Project Path="Benchmarks/MiscBenchmarks/IEnumerableIterate/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/IfVsElseIf/">
+    <Project Path="Benchmarks/MiscBenchmarks/IfVsElseIf/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/IListVsList/">
+    <Project Path="Benchmarks/MiscBenchmarks/IListVsList/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/IncrementDictionaryValue/">
+    <Project Path="Benchmarks/MiscBenchmarks/IncrementDictionaryValue/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/IndexingStrings/">
+    <Project Path="Benchmarks/MiscBenchmarks/IndexingStrings/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/IndexOfItemMatchingPredicate/">
+    <Project Path="Benchmarks/MiscBenchmarks/IndexOfItemMatchingPredicate/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/IndexOfMax/">
+    <Project Path="Benchmarks/MiscBenchmarks/IndexOfMax/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/InterlockedExchangeVsAssignment/">
+    <Project Path="Benchmarks/MiscBenchmarks/InterlockedExchangeVsAssignment/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/InterlockedIncrementVsLock/">
+    <Project Path="Benchmarks/MiscBenchmarks/InterlockedIncrementVsLock/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/InterpolationVsToString/">
+    <Project Path="Benchmarks/MiscBenchmarks/InterpolationVsToString/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/IntersectAny/">
+    <Project Path="Benchmarks/MiscBenchmarks/IntersectAny/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/IntToHexChar/">
+    <Project Path="Benchmarks/MiscBenchmarks/IntToHexChar/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/IsEven/">
+    <Project Path="Benchmarks/MiscBenchmarks/IsEven/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/IterateDistinctValues/">
+    <Project Path="Benchmarks/MiscBenchmarks/IterateDistinctValues/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/IterateNullDictionary/">
+    <Project Path="Benchmarks/MiscBenchmarks/IterateNullDictionary/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/IterateWithCollectionsMarshal/">
+    <Project Path="Benchmarks/MiscBenchmarks/IterateWithCollectionsMarshal/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/IteratingDictionaryEntries/">
+    <Project Path="Benchmarks/MiscBenchmarks/IteratingDictionaryEntries/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/IteratingListVsDictionary/">
+    <Project Path="Benchmarks/MiscBenchmarks/IteratingListVsDictionary/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/JaggedArrayFilledWithValue/">
+    <Project Path="Benchmarks/MiscBenchmarks/JaggedArrayFilledWithValue/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/JsonDeserialization/">
+    <Project Path="Benchmarks/MiscBenchmarks/JsonDeserialization/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/JsonDeserializationLargeObjects/">
+    <Project Path="Benchmarks/MiscBenchmarks/JsonDeserializationLargeObjects/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/JsonDeserializeAsynEnumerableVsNormal/">
+    <Project Path="Benchmarks/MiscBenchmarks/JsonDeserializeAsynEnumerableVsNormal/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/JsonPruning/">
+    <Project Path="Benchmarks/MiscBenchmarks/JsonPruning/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/JsonSerialization/">
+    <Project Path="Benchmarks/MiscBenchmarks/JsonSerialization/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/JsonSerialization2/">
+    <Project Path="Benchmarks/MiscBenchmarks/JsonSerialization2/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/KeyValuePairVsValueTuple/">
+    <Project Path="Benchmarks/MiscBenchmarks/KeyValuePairVsValueTuple/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/LastTwoTokens/">
+    <Project Path="Benchmarks/MiscBenchmarks/LastTwoTokens/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/Leetcode551_TitanicTony/">
+    <Project Path="Benchmarks/MiscBenchmarks/Leetcode551_TitanicTony/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/LinkedListVsList/">
+    <Project Path="Benchmarks/MiscBenchmarks/LinkedListVsList/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/LinqAllVsExcept/">
+    <Project Path="Benchmarks/MiscBenchmarks/LinqAllVsExcept/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/LinqAny/">
+    <Project Path="Benchmarks/MiscBenchmarks/LinqAny/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/LinqCountVsToListDotCount/">
+    <Project Path="Benchmarks/MiscBenchmarks/LinqCountVsToListDotCount/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/LinqExceptVsSet/">
+    <Project Path="Benchmarks/MiscBenchmarks/LinqExceptVsSet/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/LinqUnnecessarySelect/">
+    <Project Path="Benchmarks/MiscBenchmarks/LinqUnnecessarySelect/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ListAdd/">
+    <Project Path="Benchmarks/MiscBenchmarks/ListAdd/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ListContainsExactlyFiveSpecificValues/">
+    <Project Path="Benchmarks/MiscBenchmarks/ListContainsExactlyFiveSpecificValues/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ListCopy/">
+    <Project Path="Benchmarks/MiscBenchmarks/ListCopy/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ListCountGreaterThanZeroVsAny/">
+    <Project Path="Benchmarks/MiscBenchmarks/ListCountGreaterThanZeroVsAny/CountingStringsBenchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ListFirstFive/">
+    <Project Path="Benchmarks/MiscBenchmarks/ListFirstFive/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ListForVsForeach/">
+    <Project Path="Benchmarks/MiscBenchmarks/ListForVsForeach/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ListGetRangeVsLinqSkipTake/">
+    <Project Path="Benchmarks/MiscBenchmarks/ListGetRangeVsLinqSkipTake/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ListIndexVsElementAt/">
+    <Project Path="Benchmarks/MiscBenchmarks/ListIndexVsElementAt/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ListSearch/">
+    <Project Path="Benchmarks/MiscBenchmarks/ListSearch/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ListSortVsLinqOrderByGetFirstElement/">
+    <Project Path="Benchmarks/MiscBenchmarks/ListSortVsLinqOrderByGetFirstElement/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ListTruncate/">
+    <Project Path="Benchmarks/MiscBenchmarks/ListTruncate/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ListTwoColumnSort/">
+    <Project Path="Benchmarks/MiscBenchmarks/ListTwoColumnSort/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ListVsArray/">
+    <Project Path="Benchmarks/MiscBenchmarks/ListVsArray/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ListVsC5List/">
+    <Project Path="Benchmarks/MiscBenchmarks/ListVsC5List/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ListVsMemory/">
+    <Project Path="Benchmarks/MiscBenchmarks/ListVsMemory/ListVsReadOnlyMemory.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/Locking/">
+    <Project Path="Benchmarks/MiscBenchmarks/Locking/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/LockOverhead/">
+    <Project Path="Benchmarks/MiscBenchmarks/LockOverhead/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/LockVsInterlockedCompareExchange/">
+    <Project Path="Benchmarks/MiscBenchmarks/LockVsInterlockedCompareExchange/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/LoopArrayVsList/">
+    <Project Path="Benchmarks/MiscBenchmarks/LoopArrayVsList/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/LoopIndexOrLocalVariable/">
+    <Project Path="Benchmarks/MiscBenchmarks/LoopIndexOrLocalVariable/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ManyProperties/">
+    <Project Path="Benchmarks/MiscBenchmarks/ManyProperties/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ManySmallFilesVsOneLargeFile/">
+    <Project Path="Benchmarks/MiscBenchmarks/ManySmallFilesVsOneLargeFile/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/MaxByVsOrderByDescending/">
+    <Project Path="Benchmarks/MiscBenchmarks/MaxByVsOrderByDescending/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/MaxFloat/">
+    <Project Path="Benchmarks/MiscBenchmarks/MaxFloat/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/MaxOfIntArray/">
+    <Project Path="Benchmarks/MiscBenchmarks/MaxOfIntArray/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/MaxOfIntList/">
+    <Project Path="Benchmarks/MiscBenchmarks/MaxOfIntList/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/MemoryStreamDispose/">
+    <Project Path="Benchmarks/MiscBenchmarks/MemoryStreamDispose/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/MemoryStreamToGuid/">
+    <Project Path="Benchmarks/MiscBenchmarks/MemoryStreamToGuid/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/MemoryStreamVsList/">
+    <Project Path="Benchmarks/MiscBenchmarks/MemoryStreamVsList/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/MemoryVsArraySegment/">
+    <Project Path="Benchmarks/MiscBenchmarks/MemoryVsArraySegment/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/MergingDictionaries/">
+    <Project Path="Benchmarks/MiscBenchmarks/MergingDictionaries/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/MinMaxNumericValues/">
+    <Project Path="Benchmarks/MiscBenchmarks/MinMaxNumericValues/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/MoveRandomStringToFrontOfList/">
+    <Project Path="Benchmarks/MiscBenchmarks/MoveRandomStringToFrontOfList/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/MultiDimensionalVsJaggedArray/">
+    <Project Path="Benchmarks/MiscBenchmarks/MultiDimensionalVsJaggedArray/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/NewVsActivatorCreateInstance/">
+    <Project Path="Benchmarks/MiscBenchmarks/NewVsActivatorCreateInstance/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/NotroParsingProblem/">
+    <Project Path="Benchmarks/MiscBenchmarks/NotroParsingProblem/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/OddOrEven/">
+    <Project Path="Benchmarks/MiscBenchmarks/OddOrEven/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/OrdinalVsOrdinalIgnoreCase/">
+    <Project Path="Benchmarks/MiscBenchmarks/OrdinalVsOrdinalIgnoreCase/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ParallelForVsExplicitTasks/">
+    <Project Path="Benchmarks/MiscBenchmarks/ParallelForVsExplicitTasks/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ParseUrlForToken/">
+    <Project Path="Benchmarks/MiscBenchmarks/ParseUrlForToken/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/PassByRefVsPassByValue/">
+    <Project Path="Benchmarks/MiscBenchmarks/PassByRefVsPassByValue/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/PicoGym-Transformation/">
+    <Project Path="Benchmarks/MiscBenchmarks/PicoGym-Transformation/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/PropertyVsField/">
+    <Project Path="Benchmarks/MiscBenchmarks/PropertyVsField/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/PropertyVsLocal/">
+    <Project Path="Benchmarks/MiscBenchmarks/PropertyVsLocal/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/QueueStructVsClass/">
+    <Project Path="Benchmarks/MiscBenchmarks/QueueStructVsClass/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/RandomNumbers/">
+    <Project Path="Benchmarks/MiscBenchmarks/RandomNumbers/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/RandomStrings/">
+    <Project Path="Benchmarks/MiscBenchmarks/RandomStrings/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ReadingDictionaryEntries/">
+    <Project Path="Benchmarks/MiscBenchmarks/ReadingDictionaryEntries/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ReadingDictionaryEntriesConcurrently/">
+    <Project Path="Benchmarks/MiscBenchmarks/ReadingDictionaryEntriesConcurrently/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/RedunantToString/">
+    <Project Path="Benchmarks/MiscBenchmarks/RedunantToString/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ReflectionVsDynamic/">
+    <Project Path="Benchmarks/MiscBenchmarks/ReflectionVsDynamic/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/Regex/">
+    <Project Path="Benchmarks/MiscBenchmarks/Regex/RegexVsSplit.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/RepeatStrings/">
+    <Project Path="Benchmarks/MiscBenchmarks/RepeatStrings/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ReturnEmptyList/">
+    <Project Path="Benchmarks/MiscBenchmarks/ReturnEmptyList/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ReturnEmptySequence/">
+    <Project Path="Benchmarks/MiscBenchmarks/ReturnEmptySequence/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/RoundRobin/">
+    <Project Path="Benchmarks/MiscBenchmarks/RoundRobin/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/SealedVsInherited/">
+    <Project Path="Benchmarks/MiscBenchmarks/SealedVsInherited/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/SearchStringListForMultipleValues/">
+    <Project Path="Benchmarks/MiscBenchmarks/SearchStringListForMultipleValues/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/SequentialAwaitVsTaskWhenAll/">
+    <Project Path="Benchmarks/MiscBenchmarks/SequentialAwaitVsTaskWhenAll/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/SequentialAwaitVsTaskWhenAll2/">
+    <Project Path="Benchmarks/MiscBenchmarks/SequentialAwaitVsTaskWhenAll2/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/SerializeMemoryInfo/">
+    <Project Path="Benchmarks/MiscBenchmarks/SerializeMemoryInfo/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/SetIntersectionCount/">
+    <Project Path="Benchmarks/MiscBenchmarks/SetIntersectionCount/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/SetProperty/">
+    <Project Path="Benchmarks/MiscBenchmarks/SetProperty/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/SetTwoValues/">
+    <Project Path="Benchmarks/MiscBenchmarks/SetTwoValues/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ShortDayOfWeek/">
+    <Project Path="Benchmarks/MiscBenchmarks/ShortDayOfWeek/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/SingleItemEnumerable/">
+    <Project Path="Benchmarks/MiscBenchmarks/SingleItemEnumerable/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/SliceString/">
+    <Project Path="Benchmarks/MiscBenchmarks/SliceString/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/SlowIOTaskProcessing/">
+    <Project Path="Benchmarks/MiscBenchmarks/SlowIOTaskProcessing/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/SortByMultipleProperties/">
+    <Project Path="Benchmarks/MiscBenchmarks/SortByMultipleProperties/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/SortedVsUnsortedIteration/">
+    <Project Path="Benchmarks/MiscBenchmarks/SortedVsUnsortedIteration/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/SpreadOperatorVsAppendToList/">
+    <Project Path="Benchmarks/MiscBenchmarks/SpreadOperatorVsAppendToList/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/SpreadOperatorVsConcat/">
+    <Project Path="Benchmarks/MiscBenchmarks/SpreadOperatorVsConcat/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/SqlDataSetVsDataReader/">
+    <Project Path="Benchmarks/MiscBenchmarks/SqlDataSetVsDataReader/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/SqlSyncVsAsync/">
+    <Project Path="Benchmarks/MiscBenchmarks/SqlSyncVsAsync/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/SquaringNumbers/">
+    <Project Path="Benchmarks/MiscBenchmarks/SquaringNumbers/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/StaticClass/">
+    <Project Path="Benchmarks/MiscBenchmarks/StaticClass/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/StaticFieldVsInstanceField/">
+    <Project Path="Benchmarks/MiscBenchmarks/StaticFieldVsInstanceField/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/StaticHashSets/">
+    <Project Path="Benchmarks/MiscBenchmarks/StaticHashSets/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/StaticVsNormalLambda/">
+    <Project Path="Benchmarks/MiscBenchmarks/StaticVsNormalLambda/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/StringCompare/">
+    <Project Path="Benchmarks/MiscBenchmarks/StringCompare/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/StringEqualsVsHashSetLookup/">
+    <Project Path="Benchmarks/MiscBenchmarks/StringEqualsVsHashSetLookup/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/StringEqualsVsStartsWith/">
+    <Project Path="Benchmarks/MiscBenchmarks/StringEqualsVsStartsWith/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/StringReplace/">
+    <Project Path="Benchmarks/MiscBenchmarks/StringReplace/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/StringSplitSeparatorInput/">
+    <Project Path="Benchmarks/MiscBenchmarks/StringSplitSeparatorInput/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/StringStartsWithVsEquals/">
+    <Project Path="Benchmarks/MiscBenchmarks/StringStartsWithVsEquals/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/StringSwitchVsDictionary/">
+    <Project Path="Benchmarks/MiscBenchmarks/StringSwitchVsDictionary/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/StringToBytes/">
+    <Project Path="Benchmarks/MiscBenchmarks/StringToBytes/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/StringToCharArray/">
+    <Project Path="Benchmarks/MiscBenchmarks/StringToCharArray/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/StructVsClassForLargeType/">
+    <Project Path="Benchmarks/MiscBenchmarks/StructVsClassForLargeType/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/SumBinaryIntegersFromFile/">
+    <Project Path="Benchmarks/MiscBenchmarks/SumBinaryIntegersFromFile/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/SumIntegerArray/">
+    <Project Path="Benchmarks/MiscBenchmarks/SumIntegerArray/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/SwapElements/">
+    <Project Path="Benchmarks/MiscBenchmarks/SwapElements/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/SwitchVsDictionaryLookup/">
+    <Project Path="Benchmarks/MiscBenchmarks/SwitchVsDictionaryLookup/ArrayVsDictionaryLookup.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/SwitchVsDictionaryLookupIntToString/">
+    <Project Path="Benchmarks/MiscBenchmarks/SwitchVsDictionaryLookupIntToString/ArrayVsDictionaryLookup.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/TaskDotResultVsAwait/">
+    <Project Path="Benchmarks/MiscBenchmarks/TaskDotResultVsAwait/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/TaskFromResult/">
+    <Project Path="Benchmarks/MiscBenchmarks/TaskFromResult/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/TaskRunWrapperVsAsyncMethodCall/">
+    <Project Path="Benchmarks/MiscBenchmarks/TaskRunWrapperVsAsyncMethodCall/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/TasksDemo/">
+    <Project Path="Benchmarks/MiscBenchmarks/TasksDemo/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/TaskWhenAnyRemove/">
+    <Project Path="Benchmarks/MiscBenchmarks/TaskWhenAnyRemove/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ThreadCreation/">
+    <Project Path="Benchmarks/MiscBenchmarks/ThreadCreation/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ToArrayVsAny/">
+    <Project Path="Benchmarks/MiscBenchmarks/ToArrayVsAny/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ToDictionaryIntMappedToNull/">
+    <Project Path="Benchmarks/MiscBenchmarks/ToDictionaryIntMappedToNull/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ToggleBoolean/">
+    <Project Path="Benchmarks/MiscBenchmarks/ToggleBoolean/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ToHashSet/">
+    <Project Path="Benchmarks/MiscBenchmarks/ToHashSet/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ToListVsToArray/">
+    <Project Path="Benchmarks/MiscBenchmarks/ToListVsToArray/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/ToStringVsCaching/">
+    <Project Path="Benchmarks/MiscBenchmarks/ToStringVsCaching/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/TrimMultipleChars/">
+    <Project Path="Benchmarks/MiscBenchmarks/TrimMultipleChars/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/TrimQuotes/">
+    <Project Path="Benchmarks/MiscBenchmarks/TrimQuotes/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/TupleLoops/">
+    <Project Path="Benchmarks/MiscBenchmarks/TupleLoops/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/TypeLookup/">
+    <Project Path="Benchmarks/MiscBenchmarks/TypeLookup/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/UInt32ToCharString/">
+    <Project Path="Benchmarks/MiscBenchmarks/UInt32ToCharString/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/Unboxing/">
+    <Project Path="Benchmarks/MiscBenchmarks/Unboxing/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/UnnecessaryToListVsPatternMatching/">
+    <Project Path="Benchmarks/MiscBenchmarks/UnnecessaryToListVsPatternMatching/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/WaitAllVsWhenAll/">
+    <Project Path="Benchmarks/MiscBenchmarks/WaitAllVsWhenAll/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/WeightedKnobs/">
+    <Project Path="Benchmarks/MiscBenchmarks/WeightedKnobs/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/WhereCountVsCount/">
+    <Project Path="Benchmarks/MiscBenchmarks/WhereCountVsCount/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/WhereFirstOrDefaultVsFirstOrDefault/">
+    <Project Path="Benchmarks/MiscBenchmarks/WhereFirstOrDefaultVsFirstOrDefault/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/WhiteBlackGooseYield/">
+    <Project Path="Benchmarks/MiscBenchmarks/WhiteBlackGooseYield/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/WritingMemoryStreamVsByteArray/">
+    <Project Path="Benchmarks/MiscBenchmarks/WritingMemoryStreamVsByteArray/Benchmark.csproj" />
+  </Folder>
+  <Folder Name="/Benchmarks/MiscBenchmarks/XmlParsing/">
+    <Project Path="Benchmarks/MiscBenchmarks/XmlParsing/Benchmark.csproj" />
+  </Folder>
   <Folder Name="/Solution Items/">
     <File Path="demo_video.mp4" />
     <File Path="demo_video_thumbnail.png" />
+    <File Path="Directory.Packages.props" />
     <File Path="Readme.md" />
     <File Path=".gitignore" />
   </Folder>
