@@ -1,0 +1,3 @@
+[submodule "MiscBenchmarks"]
+	path = Benchmarks/MiscBenchmarks
+	url = https://github.com/Treit/MiscBenchmarks
