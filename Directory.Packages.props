@@ -1,0 +1,11 @@
+<Project>
+  <PropertyGroup>
+    <!-- Enable central package management, https://learn.microsoft.com/en-us/nuget/consume-packages/Central-Package-Management -->
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <BenchmarkDotNetVersion>0.15.8</BenchmarkDotNetVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageVersion Include="BenchmarkDotNet" Version="$(BenchmarkDotNetVersion)"/>
+    <PackageVersion Include="CommunityToolkit.HighPerformance" Version="7.1.2"/>
+  </ItemGroup>
+</Project>
