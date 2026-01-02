@@ -9,7 +9,7 @@ This library is licensed to you under the MPL-2.0.
 ## Demo
 
 <p align="center" width="100%">
-<video src="https://github.com/user-attachments/assets/0386eed0-2c04-446d-b2c5-cbd79531c9a5" width="80%" controls></video>
+<video src="https://github.com/user-attachments/assets/5fc01eab-00c1-48d6-9553-33cb95ba0bbe" width="80%" controls></video>
 </p>
 
 ## Installation
