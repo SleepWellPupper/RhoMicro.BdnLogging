@@ -17,9 +17,11 @@
     <Authors>Paul Braetz</Authors>
     <Copyright>$([System.DateTime]::Now.ToString('yyyy'))</Copyright>
     <Company>RhoMicro</Company>
-    <PackageId>$(ProjectName)</PackageId>
-    <RepositoryUrl>https://github.com/SleepWellPupper/$(ProjectName)</RepositoryUrl>
+    <PackageId>$(MSBuildProjectName)</PackageId>
+    <RepositoryUrl>https://github.com/SleepWellPupper/$(PackageId)</RepositoryUrl>
     <ProjectUrl>$(RepositoryUrl)</ProjectUrl>
+    <VersionPrefix>0.0.0</VersionPrefix>
+    <VersionSuffix>rc2</VersionSuffix>
   </PropertyGroup>
 
   <ItemGroup>
@@ -27,7 +29,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="../README.md" Pack="true" PackagePath="/" CopyToOutputDirectory="Always"/>
+    <None Include="README.md" Pack="true" PackagePath="/" CopyToOutputDirectory="Always"/>
   </ItemGroup>
 
 </Project>
